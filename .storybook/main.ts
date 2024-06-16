@@ -13,6 +13,7 @@ const config: StorybookConfig = {
 			options: { postcssLoaderOptions: { implementation: require("postcss") } },
 		},
 	],
+	staticDirs: ["../public"],
 	framework: {
 		name: "@storybook/react-vite",
 		options: {},
