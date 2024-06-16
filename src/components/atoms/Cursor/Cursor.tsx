@@ -9,7 +9,7 @@ export type Props = {
 const Cursor = ({ icon, x, y }: Props) => {
 	return (
 		<div
-			className='absolute top-0 left-0 bg-green-light w-[32px] h-[32px] rounded-full flex items-center justify-center'
+			className='absolute z-50 top-0 left-0 bg-green-light w-[32px] h-[32px] rounded-full flex items-center justify-center mix-blend-difference'
 			style={{
 				top: y - 16,
 				left: x - 16,

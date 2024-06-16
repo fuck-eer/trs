@@ -6,7 +6,7 @@ export default {
 			colors: {
 				"green-dark": "#0D1408",
 				"green-light": "#B6D9A1",
-				"green-text": "#B6D9A1",
+				"green-text": "#EEF6E8",
 				"purple-dark": "#BE03FD",
 				"purple-light": "#613078",
 				"red-light": "#B84F73",
@@ -27,6 +27,14 @@ export default {
 			},
 			fontFamily: {
 				pop: ["Poppins", "Helvetica", "Arial", "sans-serif"],
+			},
+			dropShadow: {
+				"3xl": "15px 15px 4px rgba(0, 0, 0, 0.15)",
+				border: "0 0 2px #EEF6E830",
+				glass: ["15px 15px 4px rgba(0, 0, 0, 0.15)"],
+			},
+			boxShadow: {
+				border: "0 0 2px #ffffff20",
 			},
 			keyframes: {
 				pinger: {
