@@ -1,6 +1,7 @@
 import Cursor from "../../components/atoms/Cursor/Cursor";
 import GreetingCoressel from "../../components/atoms/GreetingCoressel/GreetingCoressel";
 import GreetingText from "../../components/atoms/GreetingText/GreetingText";
+import Akatsuki from "../../components/atoms/Icons/Akatsuki";
 import Overlay from "../../components/atoms/Overlay/Overlay";
 import PageLayout from "../../components/atoms/PageLayout";
 import ScrollDownStub from "../../components/atoms/ScrollDownStub/ScrollDownStub";
@@ -29,7 +30,11 @@ const LandingPage = () => {
 				className='fixed top-0 left-[50%] translate-x-[-50%]'
 				images={DummyImages}
 			/>
-			<Cursor x={x} y={y} />
+			<Cursor
+				x={x}
+				y={y}
+				icon={<Akatsuki className='scale-[1.5] translate-y-2 animate-wiggle' />}
+			/>
 			<Overlay className={{ _container: "flex-grow w-full h-full" }}>
 				<GreetingText />
 			</Overlay>
