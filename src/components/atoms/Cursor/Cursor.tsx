@@ -4,11 +4,12 @@ import { cn } from "../../../utils/cn";
 export type Props = {
 	x: number;
 	y: number;
+	offset?: number;
 	icon?: string | React.ReactNode;
 	className?: { _innerCircle?: string; _outerCircle?: string };
 };
 
-const Cursor = ({ icon, x, y, className }: Props) => {
+const Cursor = ({ icon, x, y, className, offset = 20 }: Props) => {
 	return (
 		<div
 			className={cn(
@@ -16,8 +17,8 @@ const Cursor = ({ icon, x, y, className }: Props) => {
 				className?._innerCircle
 			)}
 			style={{
-				top: y - 20,
-				left: x - 20,
+				top: y - offset,
+				left: x - offset,
 			}}
 		>
 			{icon}

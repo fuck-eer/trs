@@ -12,7 +12,7 @@ const colors = {
 	"purple-dark": "#BE03FD",
 	"purple-light": "#613078",
 	"red-light": "#B84F73",
-	error: "FF5050",
+	error: "#FF5050",
 	gray: {
 		100: "#F7FAFC",
 		200: "#EDF2F7",
@@ -52,6 +52,24 @@ const config: Config = {
 				glass: "15px 15px 4px rgba(0, 0, 0, 0.15)",
 			},
 			keyframes: {
+				slideUp: {
+					"0%": {
+						opacity: "0",
+						transform: "translateY(30px)",
+					},
+					"100%": {
+						opacity: "1",
+						transform: "translateY(0)",
+					},
+				},
+				slideDown: {
+					"0%": {
+						transform: "translateY(0px)",
+					},
+					"100%": {
+						transform: "translateY(30px)",
+					},
+				},
 				pinger: {
 					"75%, 100%": {
 						transform: "scale(1.5)",
@@ -71,6 +89,8 @@ const config: Config = {
 				},
 			},
 			animation: {
+				slideUp: "slideUp 0.3s ease-in",
+				slideDown: "slideDown 0.3s ease-out",
 				pinger: "pinger 1s ease-in-out infinite",
 				scrollDown: "scrollDown 3s linear infinite",
 				wiggle: "wiggle 5s ease-in-out infinite",
