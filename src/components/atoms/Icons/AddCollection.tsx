@@ -1,12 +1,5 @@
-export type IconProps = {
-  width?: string;
-  height?: string;
-  viewBox?: string;
-  fill?: string;
-  color?: string;
-  strokeWidth?: string;
-  className?: string;
-};
+import { IconProps } from "./ScrollDown";
+
 const AddCollection = ({
   fill,
   height,

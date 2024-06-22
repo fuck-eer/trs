@@ -5,7 +5,6 @@ import Calender from "./Calender";
 import CollectionSettings from "./CollectionSettings";
 import CollectionStats from "./CollectionStats";
 import Episodes from "./Episodes";
-import GroupCollection from "./GroupCollection";
 import OpenPage from "./OpenPage";
 import Rating from "./Rating";
 import Seasons from "./Seasons";
@@ -13,6 +12,11 @@ import ShareCollection from "./ShareCollection";
 import Producer from "./Producer";
 import Vector from "./Vector";
 import Plus from "./Plus";
+import User from "./User";
+import UserSettings from "./UserSettings";
+import SharePublicCollection from "./SharePublicCollection";
+import Earth from "./Earth";
+import Rename from "./Rename";
 
 const IconKeys = [
   "addCollection",
@@ -28,6 +32,11 @@ const IconKeys = [
   "shareCollection",
   "vector",
   "plus",
+  "user",
+  "userSettings",
+  "sharePublicCollection",
+  "earth",
+  "rename",
 ] as const;
 export type IconKeyType = (typeof IconKeys)[number];
 
@@ -62,6 +71,16 @@ const IconHolder = ({
       return <Vector {...iconProps} />;
     case "plus":
       return <Plus {...iconProps} />;
+    case "user":
+      return <User {...iconProps} />;
+    case "userSettings":
+      return <UserSettings {...iconProps} />;
+    case "sharePublicCollection":
+      return <SharePublicCollection {...iconProps} />;
+    case "earth":
+      return <Earth {...iconProps} />;
+    case "rename":
+      return <Rename {...iconProps} />;
     default:
       return <></>;
   }
