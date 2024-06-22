@@ -6,7 +6,7 @@ export type IconProps = {
 	color?: string;
 	strokeWidth?: string;
 	className?: string;
-};
+} & React.HTMLAttributes<SVGElement>;
 const ScrollDown = ({
 	color,
 	fill,

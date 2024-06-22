@@ -5,6 +5,7 @@ import defaultColors from "tailwindcss/colors";
 const colors = {
 	...defaultColors,
 	"green-dark": "#0D1408",
+	golden: "#F1E15A",
 	"green-dark-card": "#13190F",
 	"green-light": "#B6D9A1",
 	"green-text": "#EEF6E8",
@@ -46,8 +47,9 @@ const config: Config = {
 				],
 			},
 			boxShadow: {
+				gen: "-2px 4px 4px #00000025",
 				border: "0 0 2px #ffffff20",
-				glass: ["15px 15px 4px rgba(0, 0, 0, 0.15)"],
+				glass: "15px 15px 4px rgba(0, 0, 0, 0.15)",
 			},
 			keyframes: {
 				pinger: {
