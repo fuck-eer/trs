@@ -39,20 +39,27 @@ export const CataloguePagePublic: Story = {
 };
 export const CataloguePagePrivate: Story = {
 	args: {
-		classnameForHeader: "font-bold text-2xl text-purple-dark",
+		classnameForHeader: "font-bold text-2xl text-purple-dark font-[48px]",
         label: "My Collections",
 	},
 };
 export const CollectionPage: Story = {
 	args: {
-		classnameForHeader: "text-purple-dark font-[48px]",
+		classnameForHeader: "text-purple-dark font-[48px] font-semibold text-2xl ",
         label: "My Collections",
         subHeading: "This is a sub heading Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ipsum recusandae porro quis amet accusamus quasi unde ratione? Repellendus numquam libero, maiores quos ",
 	},
 };
 export const CollectionPublic: Story = {
 	args: {
-		classnameForHeader: "text-green-text font-[48px]",
+		classnameForHeader: "text-green-text font-[48px] font-semibold text-2xl ",
+        label: "My Collections",
+        subHeading: "This is a sub heading Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ipsum recusandae porro quis amet accusamus quasi unde ratione? Repellendus numquam libero, maiores quos ",
+	},
+};
+export const CollectioncatalogueTray: Story = {
+	args: {
+		classnameForHeader: "text-green-text font-[48px] font-semibold text-2xl ",
         label: "My Collections",
         subHeading: "This is a sub heading Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ipsum recusandae porro quis amet accusamus quasi unde ratione? Repellendus numquam libero, maiores quos ",
 	},
