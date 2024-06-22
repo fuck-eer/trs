@@ -23,7 +23,7 @@ const ScrollDown = ({
       width={width ?? "28"}
       height={height ?? "60"}
       viewBox={viewBox ?? "0 0 28 60"}
-      fill={fill ?? "none"}
+      fill={"none"}
       {...rest}
       xmlns="http://www.w3.org/2000/svg"
     >
