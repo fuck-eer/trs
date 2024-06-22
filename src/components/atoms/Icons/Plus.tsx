@@ -7,7 +7,7 @@ export type IconProps = {
   strokeWidth?: string;
   className?: string;
 };
-const ScrollDown = ({
+const Plus = ({
   fill,
   height,
   viewBox,
@@ -18,17 +18,16 @@ const ScrollDown = ({
   return (
     <svg
       className={className}
-      width={width ?? "28"}
-      height={height ?? "60"}
-      viewBox={viewBox ?? "0 0 28 60"}
-      fill={fill ?? "none"}
+      width={width ?? "44"}
+      height={height ?? "44"}
+      viewBox={viewBox ?? "0 0 44 44"}
+      fill={"none"}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M14 57.5L14 2.5M14 57.5L3 46.3789M14 57.5L25 46.3789"
-        fill={fill ?? "#B6D9A1"}
-        stroke={fill ?? "#B6D9A1"}
-        stroke-width={strokeWidth ?? "5"}
+        d="M40 22H4M22 4V40"
+        stroke={fill ?? "#0D1408"}
+        stroke-width={strokeWidth ?? "7"}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -36,4 +35,4 @@ const ScrollDown = ({
   );
 };
 
-export default ScrollDown;
+export default Plus;

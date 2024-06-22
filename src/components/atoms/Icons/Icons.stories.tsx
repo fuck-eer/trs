@@ -12,6 +12,7 @@ import Seasons from "./Seasons";
 import ShareCollection from "./ShareCollection";
 import Producer from "./Producer";
 import Vector from "./Vector";
+import Plus from "./Plus";
 
 const IconKeys = [
   "addCollection",
@@ -19,7 +20,6 @@ const IconKeys = [
   "collectionSettings",
   "collectionStats",
   "episodes",
-  "groupCollection",
   "openPage",
   "studio",
   "rating",
@@ -27,6 +27,7 @@ const IconKeys = [
   "seasons",
   "shareCollection",
   "vector",
+  "plus",
 ] as const;
 export type IconKeyType = (typeof IconKeys)[number];
 
@@ -45,8 +46,6 @@ const IconHolder = ({
       return <CollectionStats {...iconProps} />;
     case "episodes":
       return <Episodes {...iconProps} />;
-    case "groupCollection":
-      return <GroupCollection {...iconProps} />;
     case "openPage":
       return <OpenPage {...iconProps} />;
     case "rating":
@@ -61,6 +60,8 @@ const IconHolder = ({
       return <Producer {...iconProps} />;
     case "vector":
       return <Vector {...iconProps} />;
+    case "plus":
+      return <Plus {...iconProps} />;
     default:
       return <></>;
   }
