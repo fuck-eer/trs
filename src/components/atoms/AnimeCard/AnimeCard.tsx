@@ -24,6 +24,18 @@ export type Props = {
 	genres?: string[] | string;
 	size?: SizesType;
 	action?: ActionsType;
+	className?: {
+		_cardContainer?: string;
+		_headingContainer?: string;
+		_rank?: string;
+		_img?: string;
+		_title?: string;
+		_description?: string;
+		_viewsContainer?: string;
+		_genres?: string;
+		_rating?: string;
+		_favorite?: string;
+	};
 };
 
 const AnimeCard = ({
@@ -36,6 +48,7 @@ const AnimeCard = ({
 	rank,
 	favorite,
 	genres,
+	className,
 }: Props) => {
 	const [isHovered, setIsHovered] = useState(false);
 	const { x, y } = useMouse();
@@ -45,7 +58,8 @@ const AnimeCard = ({
 				"relative cursor-none px-7 py-5 flex flex-col font-pop items-center justify-end gap-4 w-[260px] h-[350px] rounded-2xl transition-all duration-300 ease-in-out",
 				"before:absolute before:top-0 before:left-0 before:w-full before:h-[30%] before:rounded-t-2xl bg-gradient-to-b from-black/50 to-transparent",
 				"after:absolute after:bottom-0 after:left-0 after:w-full after:h-[30%] after:rounded-b-2xl bg-gradient-to-t from-black to-transparent",
-				isHovered ? "transparent" : "bg-green-dark/40"
+				isHovered ? "transparent" : "bg-green-dark/40",
+				className?._cardContainer
 			)}
 			onMouseOver={() => setIsHovered(true)}
 			onMouseOut={() => setIsHovered(false)}
@@ -53,7 +67,10 @@ const AnimeCard = ({
 			<img
 				src={image}
 				alt={title}
-				className='absolute top-0 rounded-2xl left-0 w-full h-full -z-10'
+				className={cn(
+					"absolute top-0 rounded-2xl left-0 w-full h-full -z-10",
+					className?._img
+				)}
 			/>
 			{isHovered && (
 				<Cursor
@@ -84,25 +101,62 @@ const AnimeCard = ({
 			) : (
 				<></>
 			)}
-			<div className='flex text-center text-green-text font-light flex-col text-[10px] items-center justify-center gap-2 animate-slideUp'>
-				<h6 className='font-bold text-[14px]'>{title}</h6>
-				<p>{description}</p>
+			<div
+				className={cn(
+					"flex text-center text-green-text font-light flex-col text-[10px] items-center justify-center gap-2 animate-slideUp",
+					className?._headingContainer
+				)}
+			>
+				<h6 className={cn("font-bold text-[14px]", className?._title)}>
+					{title}
+				</h6>
+				<p className={cn(className?._description)}>{description}</p>
 			</div>
 			{isHovered && (
-				<div className='flex flex-col gap-3 animate-slideUp'>
-					<p className='font-semibold text-[10px] text-center text-green-light'>
+				<div
+					className={cn(
+						"flex flex-col gap-3 animate-slideUp",
+						className?._viewsContainer
+					)}
+				>
+					<p
+						className={cn(
+							"font-semibold text-[10px] text-center text-green-light",
+							className?._genres
+						)}
+					>
 						{Array.isArray(genres) ? genres.join(", ") : genres}
 					</p>
-					<div className='flex flex-row justify-between items-center gap-5 text-[13px] text-green-text font-semibold'>
-						<div className='flex flex-row gap-2 items-center justify-between'>
+					<div
+						className={cn(
+							"flex flex-row justify-between items-center gap-5 text-[13px] text-green-text font-semibold",
+							className?._viewsContainer
+						)}
+					>
+						<div
+							className={cn(
+								"flex flex-row gap-2 items-center justify-between",
+								className?._rating
+							)}
+						>
 							<Star fill={colors.golden} />
 							<p>{rating ?? "--"}</p>
 						</div>
-						<div className='flex flex-row gap-2 items-center justify-between'>
+						<div
+							className={cn(
+								"flex flex-row gap-2 items-center justify-between",
+								className?._favorite
+							)}
+						>
 							<Heart />
 							<p>{favorite ?? "--"}</p>
 						</div>
-						<div className='flex flex-row gap-2 items-center justify-between'>
+						<div
+							className={cn(
+								"flex flex-row gap-2 items-center justify-between",
+								className?._rank
+							)}
+						>
 							<Rank fill={colors["green-light"]} />
 							<p>#{rank ?? "--"}</p>
 						</div>

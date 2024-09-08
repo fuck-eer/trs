@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import TrendingPane from "./TrendingPane";
 
-const DummyCards = [
+export const DummyTrendingCards = [
 	{
 		title: "Sports Anime",
 		description:
@@ -42,7 +42,7 @@ const meta = {
 		subHeading: { control: "text" },
 	},
 	args: {
-		cards: DummyCards,
+		cards: DummyTrendingCards,
 		subHeading:
 			"Lorem ipsum dolor sit amet consectetur. Pellentesque fusce non lorem mauris mattis fusce. Et est id viverra posuere semper aliquam nisl id risus.",
 	},
