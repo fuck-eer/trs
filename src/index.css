@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	body {
+		@apply font-normal font-pop;
+	}
+	p {
+		@apply font-normal font-pop;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-normal font-pop;
+	}
+	div {
+		@apply font-normal font-pop;
+	}
+}
