@@ -34,6 +34,11 @@ const config: Config = {
 	theme: {
 		extend: {
 			colors,
+			gradientFrom: "13190F",
+      gradientTo: "0D1408",
+      backgroundImage:{
+        "gradient-primary": `linear-gradient(to right, #13190F, #0D1408`,
+      },
 			fontFamily: {
 				pop: ["Poppins", "Helvetica", "Arial", "sans-serif"],
 			},
