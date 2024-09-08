@@ -1,8 +1,14 @@
+import { cn } from "../../../utils/cn";
 import ScrollDown from "../Icons/ScrollDown";
 
-const ScrollDownStub = () => {
+const ScrollDownStub = ({ className }: { className?: string }) => {
 	return (
-		<div className='flex flex-row items-start justify-center gap-3 text-sm font-medium text-green-light'>
+		<div
+			className={cn(
+				"flex flex-row items-start justify-center gap-3 text-sm font-medium text-green-light",
+				className
+			)}
+		>
 			<p>Scroll</p>
 			<ScrollDown
 				className='animate-scrollDown'

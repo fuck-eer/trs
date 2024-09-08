@@ -6,7 +6,7 @@ export type IconProps = {
 	color?: string;
 	strokeWidth?: string;
 	className?: string;
-};
+} & React.HTMLAttributes<SVGElement>;
 const ScrollDown = ({
 	color,
 	fill,
@@ -15,6 +15,7 @@ const ScrollDown = ({
 	width,
 	strokeWidth,
 	className,
+	...rest
 }: IconProps) => {
 	return (
 		<svg
@@ -23,6 +24,7 @@ const ScrollDown = ({
 			height={height ?? "60"}
 			viewBox={viewBox ?? "0 0 28 60"}
 			fill={fill ?? "none"}
+			{...rest}
 			xmlns='http://www.w3.org/2000/svg'
 		>
 			<path
