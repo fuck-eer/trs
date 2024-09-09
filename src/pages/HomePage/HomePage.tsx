@@ -5,6 +5,7 @@ import { Props as TrendingCardProps } from "../../components/atoms/TrendingCard/
 import { Props as AnimeCardProps } from "../../components/atoms/AnimeCard/AnimeCard";
 import SearchInput from "../../components/atoms/SearchInput/SearchInput";
 import RecommendedCards from "../../components/modules/RecommendedCards/RecommendedCards";
+import { staticContent } from "../../staticContent";
 
 export type RecommendedRowType = {
 	heading: string;
@@ -16,18 +17,20 @@ type Props = {
 	recommendedRows: RecommendedRowType[];
 	className?: string;
 };
-const HomePage = ({ trendingCards, recommendedRows, className }: Props) => {
+const HomePage = ({ trendingCards, recommendedRows }: Props) => {
 	return (
-		<PageLayout className='flex-row items-stretch'>
+		<PageLayout className='flex-row items-stretch gap-12 max-h-screen max-w-screen'>
 			<TrendingPane
-				heading='The Recommendation Street'
 				cards={trendingCards}
-				subHeading='Lorem ipsum dolor sit amet consectetur. Pellentesque fusce non lorem mauris mattis fusce. Et est id viverra posuere semper aliquam nisl id risus.'
+				subHeading={staticContent["HomePage.TrendingPane.SubHeading"]}
 			/>
-			<div className='flex-grow flex flex-col items-stretch gap-12 h-full'>
-				<SearchInput className={"self-center"} />
-				<div className='flex flex-col items-stretch gap-15 h-full'>
-					{recommendedRows.map((row, index) => (
+			<div className='flex-grow flex flex-col items-stretch gap-12 max-h-full'>
+				<SearchInput
+					clearEnabled
+					className={{ _inputContainer: "self-center" }}
+				/>
+				<div className='flex flex-col items-stretch gap-5 max-h-full no-scrollbar overflow-auto'>
+					{recommendedRows.map((row) => (
 						<RecommendedCards
 							cards={row.cards}
 							heading={row.heading}

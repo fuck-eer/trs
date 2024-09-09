@@ -1,0 +1,335 @@
+{
+	"trendingCards": [
+		{
+			"title": "Sports Anime",
+			"rank": "1",
+			"avatar": "https://picsum.photos/300/300",
+			"description": "Lorem ipsum dolor sit amet consectetur. Faucibus eget proin ac amet lobortis integer. Eget vitae nunc ultricies sed massa.",
+			"views": "100"
+		},
+		{
+			"title": "Action Anime",
+			"rank": "2",
+			"avatar": "https://picsum.photos/300/300",
+			"description": "Lorem ipsum dolor sit amet consectetur. Faucibus eget proin ac amet lobortis integer. Eget vitae nunc ultricies sed massa.",
+			"views": "90"
+		},
+		{
+			"title": "Gang Anime",
+			"rank": "3",
+			"avatar": "https://picsum.photos/300/300",
+			"description": "Lorem ipsum dolor sit amet consectetur. Faucibus eget proin ac amet lobortis integer. Eget vitae nunc ultricies sed massa.",
+			"views": "50"
+		}
+	],
+	"landingPageImages": [
+		{
+			"id": 1,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 2,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 3,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 4,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 5,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 6,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 7,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 8,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 9,
+			"url": "https://picsum.photos/300/300"
+		}
+	],
+	"recommendedRows": [
+		{
+			"id": 1,
+			"heading": "Recommended 1",
+			"cards": [
+				{
+					"id": 1,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 2,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 3,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 4,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"heading": "Recommended 2",
+			"cards": [
+				{
+					"id": 1,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 2,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 3,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 4,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"heading": "Recommended 3",
+			"cards": [
+				{
+					"id": 1,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 2,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 3,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 4,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				}
+			]
+		},
+		{
+			"id": 4,
+			"heading": "Recommended 4",
+			"cards": [
+				{
+					"id": 1,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 2,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 3,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 4,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				}
+			]
+		},
+		{
+			"id": 5,
+			"heading": "Recommended 5",
+			"cards": [
+				{
+					"id": 1,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 2,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 3,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 4,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				}
+			]
+		}
+	]
+}

@@ -51,11 +51,11 @@ const AnimeCard = ({
 	className,
 }: Props) => {
 	const [isHovered, setIsHovered] = useState(false);
-	const { x, y } = useMouse();
+	// const { x, y } = useMouse();
 	return (
 		<div
 			className={cn(
-				"relative cursor-none px-7 py-5 flex flex-col font-pop items-center justify-end gap-4 w-[260px] h-[350px] rounded-2xl transition-all duration-300 ease-in-out",
+				"relative px-7 py-5 flex flex-col font-pop items-center justify-end gap-4 w-[260px] h-[350px] rounded-2xl transition-all duration-300 ease-in-out",
 				"before:absolute before:top-0 before:left-0 before:w-full before:h-[30%] before:rounded-t-2xl bg-gradient-to-b from-black/50 to-transparent",
 				"after:absolute after:bottom-0 after:left-0 after:w-full after:h-[30%] after:rounded-b-2xl bg-gradient-to-t from-black to-transparent",
 				isHovered ? "transparent" : "bg-green-dark/40",
@@ -72,7 +72,7 @@ const AnimeCard = ({
 					className?._img
 				)}
 			/>
-			{isHovered && (
+			{/* {isHovered && (
 				<Cursor
 					className={{
 						_innerCircle: "w-[32px] h-[32px]",
@@ -82,7 +82,7 @@ const AnimeCard = ({
 					x={x}
 					y={y}
 				/>
-			)}
+			)} */}
 			{action ? (
 				<div
 					className={cn(

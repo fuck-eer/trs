@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Search from "../Icons/Search";
 import Cross from "../Icons/Cross";
 import { cn } from "../../../utils/cn";
+import useHyperState from "../../../hooks/useHyperState";
 
 export type Props = {
 	className?: {
@@ -24,7 +25,7 @@ const SearchInput = ({
 	className,
 	...inputProps
 }: Props) => {
-	const [searchText, setSearchText] = useState("");
+	const { stateVariable: searchText, set: setSearchText } = useHyperState("");
 	const [inputIsFocused, setInputIsFocused] = useState(false);
 	useEffect(() => {
 		const timer = setTimeout(() => {
@@ -46,17 +47,18 @@ const SearchInput = ({
 	return (
 		<div
 			className={cn(
-				"flex flex-row justify-start gap-6 items-center px-5 py-3 rounded-full bg-green-dark-card",
+				"flex flex-row justify-start gap-2 items-center px-3 py-2 rounded-full bg-green-dark-card",
 				className?._inputContainer
 			)}
 		>
-			<Search className={cn(className?._searchIcon)} />
+			<Search width='22' height='22' className={cn(className?._searchIcon)} />
 			<input
+				{...inputProps}
 				className={cn(
-					`grow h-full transition-all duration-500 ease-in-out bg-transparent text-[24px] font-medium text-green-text focus:outline-none placeholder:text-[24px] placeholder:font-semibold `,
+					`grow h-full transition-all duration-500 ease-in-out bg-transparent text-[16px] font-medium text-green-text focus:outline-none placeholder:text-[16px] placeholder:font-semibold `,
 					inputIsFocused || searchText
 						? "placeholder:text-green-text/20 w-[400px]"
-						: "placeholder:text-green-text w-[100px]",
+						: "placeholder:text-green-text w-[60px]",
 					className?._input
 				)}
 				type={"text"}
@@ -64,11 +66,12 @@ const SearchInput = ({
 				onChange={handleSearch}
 				onBlur={() => setInputIsFocused(false)}
 				onFocus={() => setInputIsFocused(true)}
-				value={searchText}
-				{...inputProps}
+				value={searchText ?? ""}
 			/>
 			{clearEnabled && (inputIsFocused || searchText) && (
 				<Cross
+					width='20'
+					height='20'
 					onClick={handleClear}
 					className={cn(
 						"cursor-pointer",

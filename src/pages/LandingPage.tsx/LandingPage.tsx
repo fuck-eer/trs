@@ -7,28 +7,13 @@ import PageLayout from "../../components/atoms/PageLayout";
 import ScrollDownStub from "../../components/atoms/ScrollDownStub/ScrollDownStub";
 import useMouse from "../../hooks/useMouse";
 
-const DummyImages = [
-	"https://picsum.photos/200/300",
-	"https://picsum.photos/200/300",
-	"https://picsum.photos/200/300",
-	"https://picsum.photos/200/300",
-	"https://picsum.photos/200/300",
-	"https://picsum.photos/200/300",
-	"https://picsum.photos/200/300",
-	"https://picsum.photos/200/300",
-	"https://picsum.photos/200/300",
-	"https://picsum.photos/200/300",
-	"https://picsum.photos/200/300",
-	"https://picsum.photos/200/300",
-];
-
-const LandingPage = () => {
+const LandingPage = ({ images }: { images: string[] }) => {
 	const { x, y } = useMouse();
 	return (
 		<PageLayout className='cursor-none p-[50px]'>
 			<GreetingCoressel
 				className='fixed top-0 left-[50%] translate-x-[-50%]'
-				images={DummyImages}
+				images={images}
 			/>
 			<Cursor
 				x={x}
