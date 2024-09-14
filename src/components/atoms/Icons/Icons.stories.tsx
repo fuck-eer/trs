@@ -10,7 +10,7 @@ import Rating from "./Rating";
 import Seasons from "./Seasons";
 import ShareCollection from "./ShareCollection";
 import Producer from "./Producer";
-import Vector from "./Vector";
+import Stats from "./Stats";
 import Plus from "./Plus";
 
 const IconKeys = [
@@ -25,7 +25,7 @@ const IconKeys = [
 	"scrollDown",
 	"seasons",
 	"shareCollection",
-	"vector",
+	"stats",
 	"plus",
 ] as const;
 export type IconKeyType = (typeof IconKeys)[number];
@@ -57,8 +57,8 @@ const IconHolder = ({
 			return <ShareCollection {...iconProps} />;
 		case "studio":
 			return <Producer {...iconProps} />;
-		case "vector":
-			return <Vector {...iconProps} />;
+		case "stats":
+			return <Stats {...iconProps} />;
 		case "plus":
 			return <Plus {...iconProps} />;
 		default:
