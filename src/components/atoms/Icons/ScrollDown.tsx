@@ -30,9 +30,9 @@ const ScrollDown = ({
 			<path
 				d='M14 57.5L14 2.5M14 57.5L3 46.3789M14 57.5L25 46.3789'
 				stroke={color ?? "#B6D9A1"}
-				stroke-width={strokeWidth ?? "5"}
-				stroke-linecap='round'
-				stroke-linejoin='round'
+				strokeWidth={strokeWidth ?? "5"}
+				strokeLinecap='round'
+				strokeLinejoin='round'
 			/>
 		</svg>
 	);

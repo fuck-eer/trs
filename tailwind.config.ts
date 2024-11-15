@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import type { Config } from "tailwindcss";
 import defaultColors from "tailwindcss/colors";
+import fluid, { extract } from "fluid-tailwind";
 
 const colors = {
 	...defaultColors,
@@ -12,7 +13,7 @@ const colors = {
 	"purple-dark": "#BE03FD",
 	"purple-light": "#613078",
 	"red-light": "#B84F73",
-	error: "#FF5050",
+	"red-error": "#FF5050",
 	gray: {
 		100: "#F7FAFC",
 		200: "#EDF2F7",
@@ -30,15 +31,15 @@ export type Colors = typeof colors;
 export type DefaultColors = typeof defaultColors;
 
 const config: Config = {
-	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+	content: { files: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"], extract },
 	theme: {
 		extend: {
 			colors,
 			gradientFrom: "13190F",
-      gradientTo: "0D1408",
-      backgroundImage:{
-        "gradient-primary": `linear-gradient(to right, #13190F, #0D1408`,
-      },
+			gradientTo: "0D1408",
+			backgroundImage: {
+				"gradient-primary": `linear-gradient(to right, #13190F, #0D1408`,
+			},
 			fontFamily: {
 				pop: ["Poppins", "Helvetica", "Arial", "sans-serif"],
 			},
@@ -46,14 +47,18 @@ const config: Config = {
 				"3xl": "15px 15px 4px rgba(0, 0, 0, 0.15)",
 				border: "0 0 2px #EEF6E830",
 				glass: ["15px 15px 4px rgba(0, 0, 0, 0.15)"],
+				modal: "8px 8px 4px rgba(0, 0, 0, 0.3)",
 				text: [
 					"0 4px 4px rgba(0, 0, 0, 0.25)",
 					"3px 3px 4px rgba(0, 0, 0, 0.25)",
 				],
+				card: "6px 9px 4px rgba(0, 0, 0, 0.25)",
+				"inset-icon": "inset 2px 4px 4px rgba(0, 0, 0, 0.25)",
 			},
 			boxShadow: {
 				gen: "-2px 4px 4px #00000025",
-				border: "0 0 2px #ffffff20",
+				modal: "8px 8px 4px rgba(0, 0, 0, 3)",
+				border: "0 0 2px #EEF6E830",
 				glass: "15px 15px 4px rgba(0, 0, 0, 0.15)",
 			},
 			keyframes: {
@@ -66,6 +71,33 @@ const config: Config = {
 						opacity: "1",
 						transform: "translateY(0)",
 					},
+				},
+				haveALook: {
+					"0%": {
+						rotate: "0deg",
+						scale: "0.9",
+					},
+					"25%": {
+						rotate: "-5deg",
+						scale: "1",
+					},
+					"35%": {
+						rotate: "-3deg",
+						scale: "1.05",
+					},
+					"50%": {
+						rotate: "0deg",
+						scale: "1.1",
+					},
+					"60%": {
+						rotate: "3deg",
+						scale: "1.05",
+					},
+					"75%": {
+						rotate: "5deg",
+						scale: "1",
+					},
+					"100%": { rotate: "0deg", scale: "0.9" },
 				},
 				slideDown: {
 					"0%": {
@@ -94,6 +126,8 @@ const config: Config = {
 				},
 			},
 			animation: {
+				haveALook: "haveALook 2s linear alternate forwards infinite",
+				haveALookRev: "haveALook 1.5s ease-in-out alternate forwards reverse",
 				slideUp: "slideUp 0.3s ease-in",
 				slideDown: "slideDown 0.3s ease-out",
 				pinger: "pinger 1s ease-in-out infinite",
@@ -104,7 +138,7 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [fluid],
 };
 
 export default config;

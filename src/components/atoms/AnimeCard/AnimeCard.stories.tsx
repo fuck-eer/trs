@@ -13,7 +13,7 @@ const meta = {
 		action: "add",
 		description: "Lorem ipsum dolor sit amet consectetur.",
 		genres: ["Action", "Adventure", "Comedy"],
-		image: "https://picsum.photos/250/350",
+		image: "https://picsum.photos/id/24/200/300",
 		rating: 4.5,
 		rank: 10,
 		favorite: "176k",

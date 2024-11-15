@@ -1,8 +1,16 @@
 import { IconProps } from "./ScrollDown";
 
-const Cross = ({ height, width, viewBox, fill, className }: IconProps) => {
+const Cross = ({
+	height,
+	width,
+	viewBox,
+	fill,
+	className,
+	...rest
+}: IconProps) => {
 	return (
 		<svg
+			{...rest}
 			width={width ?? "40"}
 			height={height ?? "40"}
 			viewBox={viewBox ?? "0 0 40 40"}

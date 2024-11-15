@@ -1,0 +1,966 @@
+{
+	"trendingCards": [
+		{
+			"title": "Sports Anime",
+			"rank": "1",
+			"avatar": "https://picsum.photos/300/300",
+			"description": "Lorem ipsum dolor sit amet consectetur. Faucibus eget proin ac amet lobortis integer. Eget vitae nunc ultricies sed massa.",
+			"views": "100"
+		},
+		{
+			"title": "Action Anime",
+			"rank": "2",
+			"avatar": "https://picsum.photos/300/300",
+			"description": "Lorem ipsum dolor sit amet consectetur. Faucibus eget proin ac amet lobortis integer. Eget vitae nunc ultricies sed massa.",
+			"views": "90"
+		},
+		{
+			"title": "Gang Anime",
+			"rank": "3",
+			"avatar": "https://picsum.photos/300/300",
+			"description": "Lorem ipsum dolor sit amet consectetur. Faucibus eget proin ac amet lobortis integer. Eget vitae nunc ultricies sed massa.",
+			"views": "50"
+		}
+	],
+	"landingPageImages": [
+		{
+			"id": 1,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 2,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 3,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 4,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 5,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 6,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 7,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 8,
+			"url": "https://picsum.photos/300/300"
+		},
+		{
+			"id": 9,
+			"url": "https://picsum.photos/300/300"
+		}
+	],
+	"recommendedRows": [
+		{
+			"id": 1,
+			"heading": "Recommended 1",
+			"cards": [
+				{
+					"id": 1,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 2,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 3,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 4,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"heading": "Recommended 2",
+			"cards": [
+				{
+					"id": 1,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 2,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 3,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 4,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"heading": "Recommended 3",
+			"cards": [
+				{
+					"id": 1,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 2,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 3,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 4,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				}
+			]
+		},
+		{
+			"id": 4,
+			"heading": "Recommended 4",
+			"cards": [
+				{
+					"id": 1,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 2,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 3,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 4,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				}
+			]
+		},
+		{
+			"id": 5,
+			"heading": "Recommended 5",
+			"cards": [
+				{
+					"id": 1,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 2,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 3,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				},
+				{
+					"id": 4,
+					"title": "Avengers: EndGame",
+					"description": "Lorem ipsum dolor sit amet consectetur.",
+					"image": "https://picsum.photos/id/24/200/300",
+					"rating": 6.9,
+					"favorite": "176k",
+					"rank": 1000,
+					"genres": "Action, Adventure, Sci-Fi",
+					"size": "sm",
+					"action": "add"
+				}
+			]
+		}
+	],
+	"animeDetails": [
+		{
+			"id": 123,
+			"data": {
+				"mal_id": 1735,
+				"url": "https://myanimelist.net/anime/1735/Naruto__Shippuuden",
+				"images": {
+					"jpg": {
+						"image_url": "https://cdn.myanimelist.net/images/anime/1565/111305.jpg",
+						"small_image_url": "https://cdn.myanimelist.net/images/anime/1565/111305t.jpg",
+						"large_image_url": "https://cdn.myanimelist.net/images/anime/1565/111305l.jpg"
+					},
+					"webp": {
+						"image_url": "https://cdn.myanimelist.net/images/anime/1565/111305.webp",
+						"small_image_url": "https://cdn.myanimelist.net/images/anime/1565/111305t.webp",
+						"large_image_url": "https://cdn.myanimelist.net/images/anime/1565/111305l.webp"
+					}
+				},
+				"trailer": {
+					"youtube_id": "1dy2zPPrKD0",
+					"url": "https://www.youtube.com/watch?v=1dy2zPPrKD0",
+					"embed_url": "https://www.youtube.com/embed/1dy2zPPrKD0?enablejsapi=1&wmode=opaque&autoplay=1",
+					"images": {
+						"image_url": "https://img.youtube.com/vi/1dy2zPPrKD0/default.jpg",
+						"small_image_url": "https://img.youtube.com/vi/1dy2zPPrKD0/sddefault.jpg",
+						"medium_image_url": "https://img.youtube.com/vi/1dy2zPPrKD0/mqdefault.jpg",
+						"large_image_url": "https://img.youtube.com/vi/1dy2zPPrKD0/hqdefault.jpg",
+						"maximum_image_url": "https://img.youtube.com/vi/1dy2zPPrKD0/maxresdefault.jpg"
+					}
+				},
+				"approved": true,
+				"titles": [
+					{
+						"type": "Default",
+						"title": "Naruto: Shippuuden"
+					},
+					{
+						"type": "Synonym",
+						"title": "Naruto Hurricane Chronicles"
+					},
+					{
+						"type": "Japanese",
+						"title": "-ナルト- 疾風伝"
+					},
+					{
+						"type": "English",
+						"title": "Naruto Shippuden"
+					},
+					{
+						"type": "German",
+						"title": "Naruto Shippuden"
+					},
+					{
+						"type": "Spanish",
+						"title": "Naruto Shippuden"
+					},
+					{
+						"type": "French",
+						"title": "Naruto Shippuden"
+					}
+				],
+				"title": "Naruto: Shippuuden",
+				"title_english": "Naruto Shippuden",
+				"title_japanese": "-ナルト- 疾風伝",
+				"title_synonyms": ["Naruto Hurricane Chronicles"],
+				"type": "TV",
+				"source": "Manga",
+				"episodes": 500,
+				"status": "Finished Airing",
+				"airing": false,
+				"aired": {
+					"from": "2007-02-15T00:00:00+00:00",
+					"to": "2017-03-23T00:00:00+00:00",
+					"prop": {
+						"from": {
+							"day": 15,
+							"month": 2,
+							"year": 2007
+						},
+						"to": {
+							"day": 23,
+							"month": 3,
+							"year": 2017
+						}
+					},
+					"string": "Feb 15, 2007 to Mar 23, 2017"
+				},
+				"duration": "23 min per ep",
+				"rating": "PG-13 - Teens 13 or older",
+				"score": 8.27,
+				"scored_by": 1689319,
+				"rank": 298,
+				"popularity": 16,
+				"members": 2537712,
+				"favorites": 113451,
+				"synopsis": "It has been two and a half years since Naruto Uzumaki left Konohagakure, the Hidden Leaf Village, for intense training following events which fueled his desire to be stronger. Now Akatsuki, the mysterious organization of elite rogue ninja, is closing in on their grand plan which may threaten the safety of the entire shinobi world.\n \nAlthough Naruto is older and sinister events loom on the horizon, he has changed little in personality—still rambunctious and childish—though he is now far more confident and possesses an even greater determination to protect his friends and home. Come whatever may, Naruto will carry on with the fight for what is important to him, even at the expense of his own body, in the continuation of the saga about the boy who wishes to become Hokage.\n\n[Written by MAL Rewrite]",
+				"background": "",
+				"season": "winter",
+				"year": 2007,
+				"broadcast": {
+					"day": "Thursdays",
+					"time": "19:30",
+					"timezone": "Asia/Tokyo",
+					"string": "Thursdays at 19:30 (JST)"
+				},
+				"producers": [
+					{
+						"mal_id": 16,
+						"type": "anime",
+						"name": "TV Tokyo",
+						"url": "https://myanimelist.net/anime/producer/16/TV_Tokyo"
+					},
+					{
+						"mal_id": 17,
+						"type": "anime",
+						"name": "Aniplex",
+						"url": "https://myanimelist.net/anime/producer/17/Aniplex"
+					},
+					{
+						"mal_id": 50,
+						"type": "anime",
+						"name": "KSS",
+						"url": "https://myanimelist.net/anime/producer/50/KSS"
+					},
+					{
+						"mal_id": 211,
+						"type": "anime",
+						"name": "Rakuonsha",
+						"url": "https://myanimelist.net/anime/producer/211/Rakuonsha"
+					},
+					{
+						"mal_id": 717,
+						"type": "anime",
+						"name": "TV Tokyo Music",
+						"url": "https://myanimelist.net/anime/producer/717/TV_Tokyo_Music"
+					},
+					{
+						"mal_id": 1365,
+						"type": "anime",
+						"name": "Shueisha",
+						"url": "https://myanimelist.net/anime/producer/1365/Shueisha"
+					}
+				],
+				"licensors": [
+					{
+						"mal_id": 119,
+						"type": "anime",
+						"name": "VIZ Media",
+						"url": "https://myanimelist.net/anime/producer/119/VIZ_Media"
+					}
+				],
+				"studios": [
+					{
+						"mal_id": 1,
+						"type": "anime",
+						"name": "Pierrot",
+						"url": "https://myanimelist.net/anime/producer/1/Pierrot"
+					}
+				],
+				"genres": [
+					{
+						"mal_id": 1,
+						"type": "anime",
+						"name": "Action",
+						"url": "https://myanimelist.net/anime/genre/1/Action"
+					},
+					{
+						"mal_id": 2,
+						"type": "anime",
+						"name": "Adventure",
+						"url": "https://myanimelist.net/anime/genre/2/Adventure"
+					},
+					{
+						"mal_id": 10,
+						"type": "anime",
+						"name": "Fantasy",
+						"url": "https://myanimelist.net/anime/genre/10/Fantasy"
+					}
+				],
+				"explicit_genres": [],
+				"themes": [
+					{
+						"mal_id": 17,
+						"type": "anime",
+						"name": "Martial Arts",
+						"url": "https://myanimelist.net/anime/genre/17/Martial_Arts"
+					}
+				],
+				"demographics": [
+					{
+						"mal_id": 27,
+						"type": "anime",
+						"name": "Shounen",
+						"url": "https://myanimelist.net/anime/genre/27/Shounen"
+					}
+				]
+			}
+		}
+	],
+	"myCollections": [
+		{
+			"heading": "My Collection 1",
+			"subHeading": "Lorem ipsum dolor sit amet consectetur. Eget et scelerisque suspendisse adipiscing amet faucibus est pellentesque ac. Sed egestas augue elit vitae lectus tellus.",
+			"isPublic": false,
+			"cards": [
+				{
+					"title": "The Last of Us",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 2",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 3",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 3",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				}
+			]
+		},
+		{
+			"heading": "My Collection 2",
+			"subHeading": "Lorem ipsum dolor sit amet consectetur. Eget et scelerisque suspendisse adipiscing amet faucibus est pellentesque ac. Sed egestas augue elit vitae lectus tellus.",
+			"isPublic": false,
+			"cards": [
+				{
+					"title": "The Last of Us",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 2",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 3",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				}
+			]
+		},
+		{
+			"heading": "My Collection 3",
+			"subHeading": "Lorem ipsum dolor sit amet consectetur. Eget et scelerisque suspendisse adipiscing amet faucibus est pellentesque ac. Sed egestas augue elit vitae lectus tellus.",
+			"isPublic": false,
+			"cards": [
+				{
+					"title": "The Last of Us",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 2",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 3",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				}
+			]
+		},
+		{
+			"heading": "My Collection 4",
+			"subHeading": "Lorem ipsum dolor sit amet consectetur. Eget et scelerisque suspendisse adipiscing amet faucibus est pellentesque ac. Sed egestas augue elit vitae lectus tellus.",
+			"isPublic": false,
+			"cards": [
+				{
+					"title": "The Last of Us",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 2",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 3",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				}
+			]
+		},
+		{
+			"heading": "My Collection 5",
+			"subHeading": "Lorem ipsum dolor sit amet consectetur. Eget et scelerisque suspendisse adipiscing amet faucibus est pellentesque ac. Sed egestas augue elit vitae lectus tellus.",
+			"isPublic": true,
+			"cards": [
+				{
+					"title": "The Last of Us",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 2",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 3",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				}
+			]
+		},
+		{
+			"heading": "My Collection 6",
+			"subHeading": "Lorem ipsum dolor sit amet consectetur. Eget et scelerisque suspendisse adipiscing amet faucibus est pellentesque ac. Sed egestas augue elit vitae lectus tellus.",
+			"isPublic": true,
+			"cards": [
+				{
+					"title": "The Last of Us",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 2",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 3",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				}
+			]
+		},
+		{
+			"heading": "My Collection 7",
+			"subHeading": "Lorem ipsum dolor sit amet consectetur. Eget et scelerisque suspendisse adipiscing amet faucibus est pellentesque ac. Sed egestas augue elit vitae lectus tellus.",
+			"isPublic": true,
+			"cards": [
+				{
+					"title": "The Last of Us",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 2",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 3",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				}
+			]
+		},
+		{
+			"heading": "My Collection 8",
+			"subHeading": "Lorem ipsum dolor sit amet consectetur. Eget et scelerisque suspendisse adipiscing amet faucibus est pellentesque ac. Sed egestas augue elit vitae lectus tellus.",
+			"isPublic": true,
+			"cards": [
+				{
+					"title": "The Last of Us",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 2",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				},
+				{
+					"title": "The Last of Us 3",
+					"description": "it is legit last of us",
+					"image": "https://www.picsum.photos/seed/picsum/200/300",
+					"rating": 9.8,
+					"favorite": "127k",
+					"rank": 8,
+					"genres": ["Action", "Horror"],
+					"size": "sm",
+					"action": "undefined"
+				}
+			]
+		}
+	],
+	"collection": {
+		"heading": "My Collection 1",
+		"createdOn": "2024 Dec 10th",
+		"updatedOn": "2024 Dec 11th",
+		"subHeading": "Lorem ipsum dolor sit amet consectetur. Eget et scelerisque suspendisse adipiscing amet faucibus est pellentesque ac. Sed egestas augue elit vitae lectus tellus.",
+		"isPublic": false,
+		"cards": [
+			{
+				"title": "The Last of Us",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 2",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 3",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 4",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 2",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 3",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 4",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 4",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			}
+		]
+	}
+}
