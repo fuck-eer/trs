@@ -1,3 +1,4 @@
+import { BrowserRouter } from "react-router-dom";
 import Cursor from "../../components/atoms/Cursor/Cursor";
 import GreetingCoressel from "../../components/atoms/GreetingCoressel/GreetingCoressel";
 import GreetingText from "../../components/atoms/GreetingText/GreetingText";
@@ -10,6 +11,7 @@ import useMouse from "../../hooks/useMouse";
 const LandingPage = ({ images }: { images: string[] }) => {
 	const { x, y } = useMouse();
 	return (
+		<BrowserRouter>
 		<PageLayout className='cursor-none p-[50px]'>
 			<GreetingCoressel
 				className='fixed top-0 left-[50%] translate-x-[-50%]'
@@ -25,6 +27,7 @@ const LandingPage = ({ images }: { images: string[] }) => {
 			</Overlay>
 			<ScrollDownStub className='absolute bottom-[30px] z-40 left-[50%] translate-x-[-50%]' />
 		</PageLayout>
+		</BrowserRouter>
 	);
 };
 

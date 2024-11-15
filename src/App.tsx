@@ -2,6 +2,7 @@ import "./App.css";
 import { useHomePageData } from "./contexts/DataContext";
 import HomePage from "./pages/HomePage/HomePage";
 import LandingPage from "./pages/LandingPage.tsx/LandingPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
 	const {
@@ -14,13 +15,21 @@ function App() {
 	return dataLoading || apiError ? (
 		<p>Error occured</p>
 	) : (
-		<>
-			<LandingPage images={landingPageImages?.map((e) => e.url) ?? []} />
-			<HomePage
+		<BrowserRouter>
+		<Routes>
+			<Route path='/' element={<>
+				<LandingPage images={landingPageImages?.map((e) => e.url) ?? []} />
+				<HomePage
 				recommendedRows={recommendedRows ?? []}
 				trendingCards={trendingCards ?? []}
-			/>
-		</>
+				/>
+			</>} />
+			<Route path='/collections' element={<p>Collection page</p>} />
+			<Route path='/collections/:id' element={<p> Inside collection with dynamic id</p>} />
+			<Route path="/:genre/:id" element={<p>Inside genre with dynamic id</p>} />
+			<Route path="anime/:id" element={<p>Inside anime with dynamic id</p>} />
+		</Routes>		
+		</BrowserRouter>
 	);
 }
 
