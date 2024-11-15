@@ -9,6 +9,7 @@ const RECOMMENDED_URL = "/recommendedRows";
 const LANDINGPAGE_IMAGES_URL = "/landingPageImages";
 const ANIME_DETAILS_URL = "/animeDetails";
 const MY_COLLECTIONS_URL = "/myCollections";
+const COLLECTION_URL = "/collection";
 export type imageType = {
 	url: string;
 	id: number;
@@ -23,6 +24,8 @@ export type Collection = {
 	heading: string;
 	subHeading: string;
 	isPublic: boolean;
+	createdOn?: string;
+	updatedOn?: string;
 	cards: AnimeCardType[];
 };
 
@@ -41,4 +44,8 @@ export const getAnimeDetails = async () => {
 };
 export const getMyCollections = async () => {
 	return await getAPI<Collection[]>(`${DOMAIN}${MY_COLLECTIONS_URL}`);
+};
+
+export const getCollectionDetails = async () => {
+	return await getAPI<Collection>(`${DOMAIN}${COLLECTION_URL}`);
 };

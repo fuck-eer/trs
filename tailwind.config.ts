@@ -47,6 +47,7 @@ const config: Config = {
 				"3xl": "15px 15px 4px rgba(0, 0, 0, 0.15)",
 				border: "0 0 2px #EEF6E830",
 				glass: ["15px 15px 4px rgba(0, 0, 0, 0.15)"],
+				modal: "8px 8px 4px rgba(0, 0, 0, 0.3)",
 				text: [
 					"0 4px 4px rgba(0, 0, 0, 0.25)",
 					"3px 3px 4px rgba(0, 0, 0, 0.25)",
@@ -56,7 +57,8 @@ const config: Config = {
 			},
 			boxShadow: {
 				gen: "-2px 4px 4px #00000025",
-				border: "0 0 2px #ffffff20",
+				modal: "8px 8px 4px rgba(0, 0, 0, 3)",
+				border: "0 0 2px #EEF6E830",
 				glass: "15px 15px 4px rgba(0, 0, 0, 0.15)",
 			},
 			keyframes: {

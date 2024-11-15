@@ -1,12 +1,5 @@
-export type IconProps = {
-	width?: string;
-	height?: string;
-	viewBox?: string;
-	fill?: string;
-	color?: string;
-	strokeWidth?: string;
-	className?: string;
-};
+import { IconProps } from "./ScrollDown";
+
 const CollectionSettings = ({
 	fill,
 	height,
@@ -14,9 +7,11 @@ const CollectionSettings = ({
 	width,
 	strokeWidth,
 	className,
+	...rest
 }: IconProps) => {
 	return (
 		<svg
+			{...rest}
 			className={className}
 			width={width ?? "44"}
 			height={height ?? "44"}

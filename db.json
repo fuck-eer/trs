@@ -863,5 +863,104 @@
 				}
 			]
 		}
-	]
+	],
+	"collection": {
+		"heading": "My Collection 1",
+		"createdOn": "2024 Dec 10th",
+		"updatedOn": "2024 Dec 11th",
+		"subHeading": "Lorem ipsum dolor sit amet consectetur. Eget et scelerisque suspendisse adipiscing amet faucibus est pellentesque ac. Sed egestas augue elit vitae lectus tellus.",
+		"isPublic": false,
+		"cards": [
+			{
+				"title": "The Last of Us",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 2",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 3",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 4",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 2",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 3",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 4",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			},
+			{
+				"title": "The Last of Us 4",
+				"description": "it is legit last of us",
+				"image": "https://www.picsum.photos/seed/picsum/200/300",
+				"rating": 9.8,
+				"favorite": "127k",
+				"rank": 8,
+				"genres": ["Action", "Horror"],
+				"action": "undefined"
+			}
+		]
+	}
 }
