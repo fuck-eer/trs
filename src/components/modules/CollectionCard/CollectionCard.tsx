@@ -7,15 +7,24 @@ import Delete from "../../atoms/Icons/Delete";
 import Globe from "../../atoms/Icons/Globe";
 import { colors } from "../../../utils/tailwindTheme";
 import Cards from "../../atoms/Icons/Cards";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
+	id: string;
 	heading: string;
 	isPublic: boolean;
 	subHeading: string;
 	className?: string;
 	cards: AnimeCardProps[];
 };
-const CollectionCard = ({ heading, isPublic, subHeading, cards }: Props) => {
+const CollectionCard = ({
+	id,
+	heading,
+	isPublic,
+	subHeading,
+	cards,
+}: Props) => {
+	const navigate = useNavigate();
 	return (
 		<div
 			className={cn(
@@ -31,7 +40,7 @@ const CollectionCard = ({ heading, isPublic, subHeading, cards }: Props) => {
 					)}
 				>
 					{heading}{" "}
-					{cards?.length && (
+					{!!cards?.length && (
 						<span className='flex gap-1 items-center text-[14px] text-gray-700 font-medium'>
 							<Cards fill={colors.gray[700]} />
 							{cards.length}
@@ -46,6 +55,9 @@ const CollectionCard = ({ heading, isPublic, subHeading, cards }: Props) => {
 						<Button
 							className='text-[14px] py-1 px-2 font-semibold'
 							variant={isPublic ? "solid-primary" : "solid-secondary"}
+							onClick={() => {
+								navigate(`/collections/${id}`);
+							}}
 						>
 							Checkout!
 						</Button>
@@ -57,7 +69,10 @@ const CollectionCard = ({ heading, isPublic, subHeading, cards }: Props) => {
 							/>
 						</Button>
 					</div>
-					<Button variant='nude-destructive'>
+					<Button
+						onClick={() => console.log("delete clicked", id)}
+						variant='nude-destructive'
+					>
 						<Delete width='18' height='18' />
 					</Button>
 				</div>
