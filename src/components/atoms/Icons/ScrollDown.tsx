@@ -3,6 +3,7 @@ export type IconProps = {
 	height?: string;
 	viewBox?: string;
 	fill?: string;
+	solid?: boolean;
 	color?: string;
 	strokeWidth?: string;
 	className?: string;

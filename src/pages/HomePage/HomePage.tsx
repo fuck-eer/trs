@@ -18,6 +18,9 @@ type Props = {
 	className?: string;
 };
 const HomePage = ({ trendingCards, recommendedRows }: Props) => {
+	console.log("trendingCards", trendingCards);
+	console.log("recommendedRows", recommendedRows);
+
 	return (
 		<PageLayout className='flex-row items-stretch gap-12 max-h-screen max-w-screen'>
 			<TrendingPane

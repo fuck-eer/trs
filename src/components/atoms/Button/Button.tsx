@@ -32,7 +32,7 @@ const Button = ({
 	return (
 		<button
 			className={cn(
-				"outline-none relative px-4 py-2 text-[16px] font-medium border-2 bg-transparent border-transparent rounded-lg flex justify-center gap-4 transition-all active:opacity-90 active:scale-95",
+				"outline-none relative px-4 py-2 text-[16px] font-medium border-2 bg-transparent border-transparent rounded-lg flex items-center justify-center gap-4 transition-all active:opacity-90 active:scale-95",
 				(variant === "solid-special" ||
 					variant === "outline-special" ||
 					variant === "ghost-special" ||

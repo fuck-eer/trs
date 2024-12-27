@@ -6,7 +6,7 @@ export type IconProps = {
 	color?: string;
 	strokeWidth?: string;
 	className?: string;
-};
+} & React.HTMLAttributes<SVGElement>;
 const ShareCollection = ({
 	height,
 	fill,
@@ -14,9 +14,11 @@ const ShareCollection = ({
 	width,
 	strokeWidth,
 	className,
+	...rest
 }: IconProps) => {
 	return (
 		<svg
+			{...rest}
 			className={className}
 			width={width ?? "44"}
 			height={height ?? "44"}

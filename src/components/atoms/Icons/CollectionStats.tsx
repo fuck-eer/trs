@@ -6,7 +6,7 @@ export type IconProps = {
 	color?: string;
 	strokeWidth?: string;
 	className?: string;
-};
+} & React.HTMLAttributes<SVGElement>;
 const CollectionStats = ({
 	fill,
 	height,
@@ -14,9 +14,11 @@ const CollectionStats = ({
 	width,
 	strokeWidth,
 	className,
+	...rest
 }: IconProps) => {
 	return (
 		<svg
+			{...rest}
 			className={className}
 			width={width ?? "40"}
 			height={height ?? "40"}

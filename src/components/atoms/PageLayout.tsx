@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "../../utils/cn";
+import NavDrop from "../modules/NavDrop/NavDrop";
 
 const PageLayout = ({
 	children,
@@ -15,6 +16,7 @@ const PageLayout = ({
 				className
 			)}
 		>
+			<NavDrop isLoggedIn={true} />
 			{children}
 		</div>
 	);

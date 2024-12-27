@@ -29,10 +29,10 @@ const RecommendedCards = ({ cards, heading, className }: Props) => {
 					className?._cardsContainer
 				)}
 			>
-				{cards.map((card, index) => (
+				{cards.map((card) => (
 					<AnimeCard
 						{...card}
-						key={index}
+						key={card.id}
 						className={{
 							_cardContainer: cn("shrink-0 grow-0", className?._card),
 						}}

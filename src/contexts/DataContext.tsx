@@ -1,41 +1,40 @@
 import React from "react";
 import { RecommendedRowType } from "../pages/HomePage/HomePage";
 import { Props as TrendingCardProps } from "../components/atoms/TrendingCard/TrendingCard";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, UseQueryResult } from "@tanstack/react-query";
 import {
 	getLandingPageImages,
 	getRecommendedRows,
 	getTrendingCards,
 	imageType,
 } from "../networks/dataApiCalls";
+import { APIReturnType } from "../utils/fetchApi";
+import { useAuth } from "@clerk/clerk-react";
 export type DataContextType = {
-	trendingCards: TrendingCardProps[];
-	recommendedRows: RecommendedRowType[];
-	landingPageImages: imageType[];
-	dataLoading: boolean;
-	apiError: boolean;
+	trendingCards: UseQueryResult<APIReturnType<TrendingCardProps[]>>;
+	recommendedRows: UseQueryResult<APIReturnType<RecommendedRowType[]>>;
+	landingPageImages: UseQueryResult<APIReturnType<imageType[]>>;
 };
 
 const DataContext = React.createContext<DataContextType>({
-	landingPageImages: [],
-	recommendedRows: [],
-	trendingCards: [],
-	dataLoading: false,
-	apiError: false,
+	landingPageImages: {} as UseQueryResult<APIReturnType<imageType[]>>,
+	recommendedRows: {} as UseQueryResult<APIReturnType<RecommendedRowType[]>>,
+	trendingCards: {} as UseQueryResult<APIReturnType<TrendingCardProps[]>>,
 });
 
 export const DataProvider = ({ children }: { children: React.ReactNode }) => {
+	const { getToken } = useAuth();
 	const landingPageQuery = useQuery({
 		queryKey: ["landingPageImages"],
-		queryFn: () => getLandingPageImages(),
+		queryFn: async () => getLandingPageImages(await getToken()),
 	});
 	const recommendedRowsQuery = useQuery({
 		queryKey: ["recommendedRowsQuery"],
-		queryFn: () => getRecommendedRows(),
+		queryFn: async () => getRecommendedRows(await getToken()),
 	});
 	const trendingCardsQuery = useQuery({
 		queryKey: ["trendingCardsQuery"],
-		queryFn: () => getTrendingCards(),
+		queryFn: async () => getTrendingCards(await getToken()),
 	});
 	console.log(
 		trendingCardsQuery.data,
@@ -46,17 +45,9 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<DataContext.Provider
 			value={{
-				landingPageImages: landingPageQuery.data?.data ?? [],
-				recommendedRows: recommendedRowsQuery.data?.data ?? [],
-				trendingCards: trendingCardsQuery.data?.data ?? [],
-				dataLoading:
-					landingPageQuery.isLoading ||
-					recommendedRowsQuery.isLoading ||
-					trendingCardsQuery.isLoading,
-				apiError:
-					landingPageQuery.isError ||
-					recommendedRowsQuery.isError ||
-					trendingCardsQuery.isError,
+				landingPageImages: landingPageQuery,
+				recommendedRows: recommendedRowsQuery,
+				trendingCards: trendingCardsQuery,
 			}}
 		>
 			{children}

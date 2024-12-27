@@ -8,6 +8,8 @@ import Rank from "../Icons/Rank";
 import { colors } from "../../../utils/tailwindTheme";
 import Plus from "../Icons/Plus";
 import Delete from "../Icons/Delete";
+import { trimTill } from "../../../utils/helper";
+import { useNavigate } from "react-router-dom";
 
 const sizes = ["sm", "md", "lg"] as const;
 const actions = ["add", "delete"] as const;
@@ -15,6 +17,7 @@ export type SizesType = (typeof sizes)[number];
 export type ActionsType = (typeof actions)[number];
 
 export type Props = {
+	id: string;
 	title: string;
 	description: string;
 	image: string;
@@ -40,6 +43,7 @@ export type Props = {
 };
 
 const AnimeCard = ({
+	id,
 	description,
 	image,
 	rating,
@@ -53,6 +57,7 @@ const AnimeCard = ({
 	className,
 }: Props) => {
 	const [isHovered, setIsHovered] = useState(false);
+	const navigate = useNavigate();
 	// const { x, y } = useMouse();
 	return (
 		<div
@@ -70,6 +75,7 @@ const AnimeCard = ({
 			)}
 			onMouseOver={() => setIsHovered(true)}
 			onMouseOut={() => setIsHovered(false)}
+			onClick={() => navigate(`/anime/${id}`)}
 		>
 			<img
 				src={image}
@@ -117,7 +123,9 @@ const AnimeCard = ({
 				<h6 className={cn("font-bold text-[14px]", className?._title)}>
 					{title}
 				</h6>
-				<p className={cn(className?._description)}>{description}</p>
+				<p title={description} className={cn(className?._description)}>
+					{trimTill(description, 37)}
+				</p>
 			</div>
 			{isHovered && !disableHover && (
 				<div
