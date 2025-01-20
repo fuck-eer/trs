@@ -27,6 +27,8 @@ import {
 import useForm from "../../hooks/useForm";
 import CollectionCheckboxes from "../../components/atoms/Form/CollectionCheckboxes";
 import { useAuth } from "@clerk/clerk-react";
+import LoadingPage from "../../components/atoms/LoadingPage";
+import ErrorPage from "../../components/atoms/ErrorPage";
 
 const MyCollectionsPage = () => {
 	const { getToken } = useAuth();
@@ -82,9 +84,9 @@ const MyCollectionsPage = () => {
 	};
 
 	return isLoading ? (
-		<p>Loading...</p>
+		<LoadingPage />
 	) : isError ? (
-		<p>Error Occurred</p>
+		<ErrorPage />
 	) : (
 		<>
 			<PageLayout className='flex flex-col gap-8'>

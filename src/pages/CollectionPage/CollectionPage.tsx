@@ -32,6 +32,9 @@ import {
 import { toast } from "sonner";
 import CollectionCheckboxes from "../../components/atoms/Form/CollectionCheckboxes";
 import { useAuth } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
+import LoadingPage from "../../components/atoms/LoadingPage";
+import ErrorPage from "../../components/atoms/ErrorPage";
 
 type Props = { collectionId: string };
 const CollectionPage = ({ collectionId }: Props) => {
@@ -43,7 +46,7 @@ const CollectionPage = ({ collectionId }: Props) => {
 	const [openUsersMenu, setOpenUsersMenu] = useState(false);
 	const [selectedCollections, setSelectedCollections] = useState<string[]>([]);
 	const [mode, setMode] = useState<"public" | "private">("public");
-
+	const navigate = useNavigate();
 	const {
 		formData,
 		formFieldBlurHandler,
@@ -91,9 +94,9 @@ const CollectionPage = ({ collectionId }: Props) => {
 			setMode("public");
 		}
 	};
-
-	if (!isLoading && (isError || !data)) return <p>Error occurred</p>;
-	if (!data) return <p>Error occurred</p>;
+	if (isLoading) return <LoadingPage />;
+	if (!isLoading && isError) return <ErrorPage />;
+	if (!data) return <LoadingPage />;
 	const {
 		data: { cards, heading, subHeading, createdOn, updatedOn },
 	} = data;
@@ -110,9 +113,9 @@ const CollectionPage = ({ collectionId }: Props) => {
 	};
 
 	return isLoading ? (
-		<p>Loading...</p>
+		<LoadingPage />
 	) : isError ? (
-		<p>Error Occurred</p>
+		<ErrorPage />
 	) : (
 		<>
 			<PageLayout className='flex-col gap-12'>
@@ -268,9 +271,8 @@ const CollectionPage = ({ collectionId }: Props) => {
 						<AnimeCard key={card.title} {...card} />
 					))}
 					<AddCardPlaceholder
-						onAdd={() => console.log("add clicked")}
+						onAdd={() => navigate("/")}
 						isPublic={isPublicMode}
-						size='md'
 					/>
 				</div>
 			</PageLayout>

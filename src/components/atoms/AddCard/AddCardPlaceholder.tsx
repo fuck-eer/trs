@@ -13,15 +13,15 @@ const AddCardPlaceholder = ({ onAdd, isPublic, size = "md" }: Props) => {
 		<div
 			onClick={onAdd}
 			className={cn(
-				"relative px-7 py-5 flex flex-col font-pop items-center justify-center border-[2px] border-dashed gap-4 w-[260px] h-[350px] rounded-2xl transition-all duration-300 ease-in-out",
+				"relative cursor-pointer px-7 py-5 flex flex-col font-pop items-center justify-center border-[2px] border-dashed gap-4 w-[260px] h-[350px] rounded-2xl transition-all duration-300 ease-in-out",
 				"before:absolute before:top-0 before:left-0 before:w-full before:h-[30%] before:rounded-t-2xl before:bg-gradient-to-b before:from-black/50 before:to-transparent",
 				"after:absolute after:bottom-0 after:left-0 after:w-full after:h-[30%] after:rounded-b-2xl after:bg-gradient-to-t after:from-black after:to-transparent",
 				isPublic ? "border-green-light" : "border-purple-dark",
 				size === "sm"
 					? "w-[188px] h-[232px]"
 					: size === "md"
-						? "w-[260px] h-[350px]"
-						: "w-[260px] h-[350px]",
+					? "w-[224px] h-[290px]"
+					: "w-[260px] h-[350px]",
 				isHovered ? "transparent" : "bg-green-dark/40"
 			)}
 			onMouseOver={() => setIsHovered(true)}

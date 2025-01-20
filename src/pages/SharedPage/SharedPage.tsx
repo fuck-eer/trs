@@ -3,6 +3,8 @@ import PageLayout from "../../components/atoms/PageLayout";
 import SharedCard from "../../components/atoms/SharedCard/SharedCard";
 import { getLibraries } from "../../networks/dataApiCalls";
 import { useAuth } from "@clerk/clerk-react";
+import LoadingPage from "../../components/atoms/LoadingPage";
+import ErrorPage from "../../components/atoms/ErrorPage";
 
 const SharedPage = () => {
 	const { getToken } = useAuth();
@@ -18,9 +20,9 @@ const SharedPage = () => {
 			</div>
 			<div className='flex flex-row flex-wrap gap-5 justify-start items-center'>
 				{isLoading ? (
-					<p>Loading...</p>
-				) : !isLoading && (isError || !data) ? (
-					<p>Error occurred</p>
+					<LoadingPage />
+				) : !isLoading && isError ? (
+					<ErrorPage />
 				) : (
 					data?.data?.map(
 						({

@@ -1,7 +1,10 @@
 import { APIReturnType, getAPI, postAPI } from "../utils/fetchApi";
 import { JikanApiResponseType } from "../utils/types/jikanApiResponseType";
 import { Props as AnimeCardType } from "../components/atoms/AnimeCard/AnimeCard";
-import { recommendedConfig } from "../utils/recommendedConfig";
+import {
+	recommendedConfig,
+	recommendedConfig2,
+} from "../utils/recommendedConfig";
 import axios from "axios";
 
 export const DOMAIN = "http://localhost:3050";
@@ -31,6 +34,14 @@ export type Collection = {
 	createdOn?: string;
 	updatedOn?: string;
 	cards: AnimeCardType[];
+};
+
+export type RecommendedRowResponseType = {
+	id: string;
+	heading: string;
+	cards: JikanApiResponseType[];
+	inView: boolean;
+	query: string;
 };
 
 export type GetTrendingLibrariesAPIResponse = {
@@ -72,6 +83,7 @@ export type AddAnimeToCollectionsParams = {
 	userId?: string;
 	catalogueIds: string[];
 	animeDetails: {
+		id: string;
 		title: string;
 		description: string;
 		imageUrl: string;
@@ -140,21 +152,18 @@ export const getTrendingCards = async (token?: string | null) => {
 	return { ...response, data: trendingCards };
 };
 export const getRecommendedRows = async (token?: string | null) => {
-	const apiCalls = recommendedConfig.map((recommendedRow) => {
-		return axios.get<APIReturnType<JikanApiResponseType[]>>(
-			`${DOMAIN}${RECOMMENDED_URL}${recommendedRow.query}`,
-			{
-				headers: {
-					Authorization: `Bearer ${token}`,
-				},
-			}
-		);
-	});
-	const responses = await Promise.all(apiCalls);
+	const responses = await getAPI<RecommendedRowResponseType[]>(
+		`${DOMAIN}${RECOMMENDED_URL}`,
+		{
+			headers: {
+				Authorization: `Bearer ${token}`,
+			},
+		}
+	);
 	return {
-		data: recommendedConfig.map((e, i) => ({
-			...e,
-			cards: responses[i]?.data?.data?.map((card) => ({
+		data: responses.data.map((recommendedRow) => ({
+			...recommendedRow,
+			cards: recommendedRow.cards.map((card) => ({
 				id: card.mal_id,
 				title: card.title,
 				description: card.synopsis,
@@ -167,6 +176,64 @@ export const getRecommendedRows = async (token?: string | null) => {
 		})),
 	};
 };
+// export const getRecommendedRows = async (token?: string | null) => {
+// 	const apiCalls = recommendedConfig.map((recommendedRow) => {
+// 		return axios.get<APIReturnType<JikanApiResponseType[]>>(
+// 			`${DOMAIN}${RECOMMENDED_URL}${recommendedRow.query}`,
+// 			{
+// 				headers: {
+// 					Authorization: `Bearer ${token}`,
+// 				},
+// 			}
+// 		);
+// 	});
+
+// 	const responses = await Promise.all(apiCalls);
+// 	return {
+// 		data: recommendedConfig.map((e, i) => ({
+// 			...e,
+// 			cards: responses[i]?.data?.data?.map((card) => ({
+// 				id: card.mal_id,
+// 				title: card.title,
+// 				description: card.synopsis,
+// 				image: card.images.jpg.image_url,
+// 				rating: card.score,
+// 				favorite: card.favorites || card.members,
+// 				rank: card.rank,
+// 				genres: card.genres?.map((genre) => genre.name),
+// 			})),
+// 		})),
+// 	};
+// };
+// export const getRecommendedRows2 = async (token?: string | null) => {
+// 	const apiCalls = recommendedConfig2.map((recommendedRow) => {
+// 		return axios.get<APIReturnType<JikanApiResponseType[]>>(
+// 			`${DOMAIN}${RECOMMENDED_URL}${recommendedRow.query}`,
+// 			{
+// 				headers: {
+// 					Authorization: `Bearer ${token}`,
+// 				},
+// 			}
+// 		);
+// 	});
+
+// 	const responses = await Promise.all(apiCalls);
+// 	return {
+// 		data: recommendedConfig2.map((e, i) => ({
+// 			...e,
+// 			cards: responses[i]?.data?.data?.map((card) => ({
+// 				id: card.mal_id,
+// 				title: card.title,
+// 				description: card.synopsis,
+// 				image: card.images.jpg.image_url,
+// 				rating: card.score,
+// 				favorite: card.favorites || card.members,
+// 				rank: card.rank,
+// 				genres: card.genres?.map((genre) => genre.name),
+// 			})),
+// 		})),
+// 	};
+// };
 export const getLandingPageImages = async (token?: string | null) => {
 	const response = await getAPI<{ images: GetLandingPageAPIResponse[] }>(
 		`${DOMAIN}${LANDINGPAGE_IMAGES_URL}`,
@@ -237,7 +304,10 @@ export const getCollectionDetails = async (
 		isPublic: response.data.isPublic,
 		createdOn: response.data.createdAt,
 		updatedOn: response.data.updatedAt,
-		cards: response.data.content,
+		cards: response.data.content.map((card) => ({
+			...card,
+			image: card.imageUrl,
+		})),
 	};
 
 	return { ...response, data: transformedCollection };

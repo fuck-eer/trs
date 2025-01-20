@@ -62,14 +62,14 @@ const AnimeCard = ({
 	return (
 		<div
 			className={cn(
-				"relative px-7 py-5 flex flex-col font-pop items-center justify-end gap-4 w-[260px] h-[350px] rounded-2xl transition-all duration-300 ease-in-out",
-				"before:absolute before:top-0 before:left-0 before:w-full before:h-[30%] before:rounded-t-2xl before:bg-gradient-to-b before:from-black/50 before:to-transparent",
-				"after:absolute after:bottom-0 after:left-0 after:w-full after:h-[30%] after:rounded-b-2xl after:bg-gradient-to-t after:from-black after:to-transparent",
+				"relative cursor-pointer overflow-hidden px-7 py-5 flex flex-col font-pop items-center justify-end gap-4 w-[260px] h-[350px] rounded-2xl transition-all duration-300 ease-in-out",
+				"before:absolute before:top-0 before:left-0 before:w-full before:h-[30%] before:rounded-t-2xl before:bg-gradient-to-b before:from-black/60 before:to-transparent",
+				"after:absolute after:bottom-0 after:left-0 after:w-full after:h-[30%] after:rounded-b-2xl after:bg-gradient-to-t after:from-black after:to-transparent hover:after:h-[90%]",
 				size === "sm"
 					? "w-[188px] h-[232px]"
 					: size === "md"
-						? "w-[260px] h-[350px]"
-						: "w-[260px] h-[350px]",
+					? "w-[224px] h-[290px]"
+					: "w-[260px] h-[350px]",
 				isHovered ? "transparent" : "bg-green-dark/40",
 				className?._cardContainer
 			)}
@@ -81,21 +81,11 @@ const AnimeCard = ({
 				src={image}
 				alt={title}
 				className={cn(
-					"absolute top-0 rounded-2xl left-0 w-full h-full -z-10",
-					className?._img
+					"absolute top-0 rounded-2xl left-0 w-full h-full -z-10 transition-all duration-300 ease-in-out",
+					className?._img,
+					isHovered ? "scale-110" : "scale-100"
 				)}
 			/>
-			{/* {isHovered && (
-				<Cursor
-					className={{
-						_innerCircle: "w-[32px] h-[32px]",
-						_outerCircle: "w-[40px] h-[40px]",
-					}}
-					offset={16}
-					x={x}
-					y={y}
-				/>
-			)} */}
 			{action === "add" || action === "delete" ? (
 				<div
 					className={cn(
@@ -116,7 +106,7 @@ const AnimeCard = ({
 			)}
 			<div
 				className={cn(
-					"flex text-center text-green-text font-light flex-col text-[10px] items-center justify-center gap-2 animate-slideUp",
+					"flex text-center text-green-text font-light flex-col text-[10px] items-center justify-center z-10 gap-2 animate-slideUp",
 					className?._headingContainer
 				)}
 			>
@@ -124,13 +114,13 @@ const AnimeCard = ({
 					{title}
 				</h6>
 				<p title={description} className={cn(className?._description)}>
-					{trimTill(description, 37)}
+					{trimTill(description, size === "sm" ? 23 : size === "md" ? 30 : 37)}
 				</p>
 			</div>
 			{isHovered && !disableHover && (
 				<div
 					className={cn(
-						"flex flex-col gap-3 animate-slideUp",
+						"flex flex-col gap-3 animate-slideUp z-10",
 						className?._viewsContainer
 					)}
 				>
@@ -145,7 +135,9 @@ const AnimeCard = ({
 					<div
 						className={cn(
 							"flex flex-row justify-between items-center gap-5 text-[13px] text-green-text font-semibold",
-							size === "sm" && "text-[10px] gap-3",
+							size === "sm" && "text-[10px] gap-[10px]",
+							size === "md" && "text-[12px] gap-4",
+							size === "lg" && "text-[14px] gap-5",
 							className?._viewsContainer
 						)}
 					>
@@ -174,7 +166,7 @@ const AnimeCard = ({
 							)}
 						>
 							<Rank fill={colors["green-light"]} />
-							<p>#{rank ?? "--"}</p>
+							<p>{rank ?? "--"}</p>
 						</div>
 					</div>
 				</div>
