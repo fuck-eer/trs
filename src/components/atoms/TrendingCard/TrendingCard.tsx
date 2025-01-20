@@ -2,6 +2,7 @@ import Avatar from "../Avatar/Avatar";
 import Eye from "../Icons/Eye";
 import { colors } from "../../../utils/tailwindTheme";
 import { cn } from "../../../utils/cn";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 export type Props = {
 	title: string;
 	rank: number;
@@ -25,34 +26,43 @@ const TrendingCard = ({
 	views,
 	className,
 }: Props) => {
+	const isLarge = useMediaQuery("lg");
+	const isMedium = useMediaQuery("md");
 	return (
 		<div
 			className={cn(
-				"relative flex min-w-[400px] flex-col items-stretch justify-between gap-2 p-5 border rounded-lg bg-green-dark-card border-green-dark font-pop h-[180px]",
+				"relative z-0 flex min-w-[350px] w-full flex-col items-stretch justify-between gap-2 p-5 border rounded-lg bg-green-dark-card border-green-dark font-pop",
 				className?._cardContainer
 			)}
 		>
 			<span
 				className={cn(
-					"absolute text-[62px] font-bold top-0 right-[20px] text-green-light/5 [text-shadow:0px_0px_2px_#0D1408] drop-shadow-text",
-					className?._rank
+					"absolute font-bold top-0 right-[20px] text-green-light/5 [text-shadow:0px_0px_2px_#0D1408] drop-shadow-text",
+					className?._rank,
+					isLarge ? "text-[64px]" : isMedium ? "text-[56px]" : "text-[48px]"
 				)}
 			>
 				#{rank}
 			</span>
-			<div className='flex flex-col items-stretch max-w-[340px] gap-2'>
+			<div
+				className={cn(
+					"flex z-10 flex-col items-stretch max-w-[340px] pb-4 gap-2"
+				)}
+			>
 				<h3
 					className={cn(
-						"text-[24px] font-semibold text-green-text",
-						className?._title
+						"font-semibold text-green-text",
+						className?._title,
+						isLarge ? "text-[22px]" : isMedium ? "text-[18px]" : "text-[16px]"
 					)}
 				>
 					{title}
 				</h3>
 				<p
 					className={cn(
-						"text-[14px] text-green-text font-light",
-						className?._description
+						"text-green-text font-light",
+						className?._description,
+						isLarge ? "text-[14px]" : isMedium ? "text-[12px]" : "text-[10px]"
 					)}
 				>
 					{description}

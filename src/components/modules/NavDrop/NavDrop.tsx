@@ -17,8 +17,9 @@ import {
 
 type Props = {
 	isLoggedIn: boolean;
+	position?: "topRight" | "bottomLeft";
 };
-const NavDrop = ({ isLoggedIn }: Props) => {
+const NavDrop = ({ isLoggedIn, position = "topRight" }: Props) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const navigate = useNavigate();
 
@@ -38,8 +39,22 @@ const NavDrop = ({ isLoggedIn }: Props) => {
 		}
 	};
 
+	const positionClasses = {
+		mainDiv: position === "topRight" ? "top-12 right-16" : "bottom-12 left-16",
+		dropDiv:
+			position === "topRight"
+				? "top-0 left-0 flex-col justify-end"
+				: "bottom-0 left-0 flex-col justify-start",
+	};
+
 	return (
-		<div className='fixed right-16 top-12 z-50'>
+		<div
+			className={cn(
+				"fixed z-50 transition-all duration-300",
+				positionClasses.mainDiv,
+				isOpen ? "animate-wiggleNoScale" : ""
+			)}
+		>
 			<div className='relative flex font-bold text-lg font-serif text-green-light flex-col items-center justify-center w-16 h-16 rounded-full border-4 bg-green-dark-card border-green-light shadow-glass-card z-10'>
 				<SignedOut>
 					<SignInButton>TRS</SignInButton>
@@ -50,8 +65,9 @@ const NavDrop = ({ isLoggedIn }: Props) => {
 			</div>
 			<div
 				className={cn(
-					"absolute top-0 left-0 w-full min-h-28 bg-green-dark-card z-[1] rounded-full py-5 px-2 flex flex-col justify-end gap-3 shadow-main transition-all duration-300 ease-in-out",
-					isOpen ? "pt-20" : "pt-5"
+					"absolute w-full min-h-28 bg-green-dark-card z-[1] rounded-full py-5 px-2 flex gap-3 shadow-main transition-all duration-300 ease-in-out",
+					positionClasses.dropDiv,
+					isOpen ? (position === "topRight" ? "pt-20" : "pb-20") : "pt-5"
 				)}
 			>
 				{isOpen && (
@@ -98,7 +114,10 @@ const NavDrop = ({ isLoggedIn }: Props) => {
 					<FaChevronDown
 						className={cn(
 							"text-green-light transition-all duration-300 ease-in-out",
-							isOpen ? "rotate-180" : "rotate-0"
+							(isOpen && position === "topRight") ||
+								(!isOpen && position === "bottomLeft")
+								? "rotate-180"
+								: "rotate-0"
 						)}
 					/>
 				</div>

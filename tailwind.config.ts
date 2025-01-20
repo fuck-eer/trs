@@ -119,11 +119,37 @@ const config: Config = {
 					"25%": { transform: "translateY(10px)" },
 					"75%": { transform: "translateY(-10px)" },
 				},
+				scrollLeft: {
+					"0%,50%,100%": { transform: "translateX(0)" },
+					"25%": { transform: "translateX(-4px)" },
+					"75%": { transform: "translateX(4px)" },
+				},
+				scrollRight: {
+					"0%,50%,100%": { transform: "translateX(0)" },
+					"25%": { transform: "translateX(4px)" },
+					"75%": { transform: "translateX(-4px)" },
+				},
+				wiggleNoScale: {
+					"0%, 100%": {
+						transform: "rotate(-2deg)",
+					},
+					"50%": { transform: "rotate(2deg)" },
+				},
 				wiggle: {
 					"0%, 100%": {
 						transform: "rotate(-5deg) scale(1.5) translateY(6px)",
 					},
 					"50%": { transform: "rotate(8deg) scale(1.5) translateY(4px)" },
+				},
+				wiggleRocket: {
+					"0%, 100%": {
+						transform:
+							"rotate(-15deg) scale(1.5) translateY(6px) translateX(-4px)",
+					},
+					"50%": {
+						transform:
+							"rotate(8deg) scale(1.5) translateY(-4px) translateX(4px)",
+					},
 				},
 			},
 			animation: {
@@ -133,7 +159,11 @@ const config: Config = {
 				slideDown: "slideDown 0.3s ease-out",
 				pinger: "pinger 1s ease-in-out infinite",
 				scrollDown: "scrollDown 3s linear infinite",
+				scrollLeft: "scrollLeft 3s linear infinite",
+				scrollRight: "scrollRight 3s linear infinite",
 				wiggle: "wiggle 5s ease-in-out infinite",
+				wiggleRocket: "wiggleRocket 15s ease-in-out infinite",
+				wiggleNoScale: "wiggleNoScale 5s ease-in-out infinite",
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 			},

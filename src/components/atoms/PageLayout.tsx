@@ -1,6 +1,8 @@
 import React from "react";
 import { cn } from "../../utils/cn";
 import NavDrop from "../modules/NavDrop/NavDrop";
+import { useLocation } from "react-router-dom";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const PageLayout = ({
 	children,
@@ -9,14 +11,16 @@ const PageLayout = ({
 	children: React.ReactNode;
 	className?: string;
 }) => {
+	const isLarge = useMediaQuery("lg");
+	const isMedium = useMediaQuery("md");
 	return (
 		<div
 			className={cn(
-				"relative font-pop flex flex-col items-stretch justify-start w-screen min-h-screen p-14 bg-gradient-to-b from-green-dark to-black",
+				"relative z-0 font-pop flex flex-col items-stretch justify-start w-screen min-h-screen bg-gradient-to-b from-green-dark to-black overflow-x-hidden",
+				isLarge ? "p-14" : isMedium ? "p-10" : "p-6",
 				className
 			)}
 		>
-			<NavDrop isLoggedIn={true} />
 			{children}
 		</div>
 	);

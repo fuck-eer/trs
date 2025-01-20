@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 
 export type BreakpointType = "sm" | "md" | "lg";
-const breakpoints = { sm: "488px", md: "769px", lg: "1281px" };
+const breakpoints = { sm: "488px", md: "900px", lg: "1800px" };
 //!HOOK TO CHECK IF WE ARE GREATER THAN THE BREAKPOINTS
 export default function useMediaQuery(breakpoint: BreakpointType | number) {
 	const [matchesBreakpoint, setMatchesBreakpoint] = useState<boolean>(true);

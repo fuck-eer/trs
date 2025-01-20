@@ -79,7 +79,7 @@ const CollectionCard = ({
 			</div>
 			<div className='flex flex-row gap-5 grow justify-end'>
 				{cards.map((card, index) =>
-					index < 4 ? <AnimeCard {...card} disableHover /> : <></>
+					index < 4 ? <AnimeCard size='sm' {...card} disableHover /> : <></>
 				)}
 			</div>
 		</div>

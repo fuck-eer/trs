@@ -20,6 +20,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import CollectionCheckboxes from "../../components/atoms/Form/CollectionCheckboxes";
 import { useAuth } from "@clerk/clerk-react";
+import ErrorPage from "../../components/atoms/ErrorPage";
 
 export type Props = {
 	animeID: string;
@@ -55,10 +56,9 @@ const AnimeDetailsPage = ({ animeID }: Props) => {
 		setSelectedCollections(Array.from(selectedCollectionsSet));
 	};
 
-	if (!isLoading && (isError || !data)) return <p>Error occurred</p>;
+	if (!isLoading && isError) return <ErrorPage />;
 
-	if (!data) return <p>Error occurred</p>;
-	console.log(data, "new d");
+	if (!data) return <ErrorPage />;
 
 	const {
 		data: {
@@ -78,6 +78,7 @@ const AnimeDetailsPage = ({ animeID }: Props) => {
 				score,
 				status,
 				rank,
+				mal_id,
 				favorites,
 				popularity,
 				members,
@@ -196,6 +197,7 @@ const AnimeDetailsPage = ({ animeID }: Props) => {
 								genres: genres?.map((e) => e.name),
 								favorite: favorites,
 								rank,
+								id: mal_id,
 							};
 							addAnimeToCollectionsMutation(
 								{
